@@ -1,0 +1,77 @@
+sudo gedit $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+u
+
+		/usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+     export CLASSPATH="$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.0.jar:$HADOOP_HOME/share/hadoop/common/hadoop-common-3.2.0.jar:~/MapReduceTutorial/map/SalesCountry/*:$HADOOP_HOME/lib/*"
+		
+		
+		
+		
+		$HADOOP_HOME/bin/hdfs dfs -mkdir /mydirectory
+		
+		$HADOOP_HOME/bin/hdfs dfs -copyToLocal /temp.txt
+		
+		$HADOOP_HOME/bin/hdfs dfs -ls /
+		
+		$HADOOP_HOME/bin/hdfs dfs -copyFromLocal temp.txt /
+		
+		
+		$ hadoop fs -copyFromLocal /usr/home/Desktop/data.txt /user/test
+		
+		
+		SalesJan2009.csv
+		
+		$HADOOP_HOME/bin/hadoop jar ProductSalePerCountry.jar /SalesJan2009.csv /mapreduce_output_sales
+		
+		val txtFile=sc.textFile("hdfs://localhost:54310/hello.txt")
+   
+		Command for hadoop:
+					ls <path>
+					hdfs dfs -ls /user/dataflair/dir1
+					
+					for list discription:
+					hdfs dfs -ls R
+					
+			Put command :
+			    
+				  put <localSrc> <dest>
+				  hdfs dfs -put /home/dataflair/Desktop/sample /user/dataflair/dir1
+				  
+		  Copy from local:
+						copyFromLocal <localSrc> <dest>
+						hdfs dfs -copyFromLocal /home/dataflair/Desktop/sample /user/dataflair/dir1
+					
+		 Get 
+		 get [-crc] <src> <localDest>
+		 
+		 for display content:
+		 hdfs dfs -cat <filename>
+
+		----------------------------------------------
+		 mv for move filename
+		 mv <src> <dest>
+		 hadoop fs -mv /user/dataflair/dir1/purchases.txt /user/dataflair/dir2
+		 
+		 for copy filename:
+		 cp <src> <dest>
+		 
+		 hadoop dfs -cp <src> <dest>
+
+========================================================================================
+
+hadoop path :hdfs://localhost:54310
+
+
+		 
+
+
+
+
+
+
+
+
+
+
+
