@@ -1,0 +1,16 @@
+git config --global user.name "mukeshvermajpc"
+git config --global user.email "mukeshvermajpc@gmail.com"
+…or create a new repository on the command line
+
+echo "# notes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/mukeshvermajpc/notes.git
+git push -u origin master
+
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/mukeshvermajpc/notes.git
+git push -u origin master
