@@ -1,0 +1,20 @@
+
+Installation step of mysql-server in ubantu
+1. sudo apt-get update
+2. sudo apt-get install mysql-server
+3. after successfully installation
+   sudo mysql
+4. run select command for check root password is blank or not
+
+   SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+5. for changing root password run below command.
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
+   FLUSH PRIVILEGES;
+
+6. then login mysql server by using
+   sudo mysql_secure_installation
+7. mysql -u root -p
+
+
+
