@@ -1,0 +1,61 @@
+Installation process of kafka:
+-----------------------------
+make sure java should install in your system if not first install java and check version
+java -version
+
+download zookeeper:
+http://zookeeper.apache.org/releases.html
+ tar -zxf zookeeper-3.4.6.tar.gz
+cd zookeeper-3.4.6
+mkdir data
+
+make changes in zoo.cfg directory
+--------------------------------------
+
+$ vi conf/zoo.cfg
+tickTime=2000
+dataDir=/path/to/zookeeper/data
+clientPort=2181
+initLimit=5
+syncLimit=2
+
+start zookeeper server:
+----------------------
+bin/zkServer.sh start
+
+start cli:
+-----------
+bin/zkCli.sh
+
+stop zookeeper server:
+----------------------
+bin/zkServer.sh stop
+
+For installing kafka first download from this url:
+----------------------------------------------------
+
+https://www.apache.org/dyn/closer.cgi?path=/kafka/0.9.0.0/kafka_2.11-0.9.0.0.tgz
+
+and extract it:
+tar -zxf kafka_2.11.0.9.0.0 tar.gz
+$ cd kafka_2.11.0.9.0
+
+start kafka server:
+------------------
+bin/kafka-server-start.sh config/server.propertie
+
+stop kafka server:
+-----------------
+
+bin/kafka-server-stop.sh config/server.properties
+
+
+
+
+
+
+
+
+
+
+
