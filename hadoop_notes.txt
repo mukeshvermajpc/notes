@@ -1,0 +1,237 @@
+Hadoop Tutorial
+------------------------
+Big data is huge amount of data that can not be store and process. then next question is what is exactly big data. Big data is only data in Tera byte or peta byte only big data no b
+lets take 10 tera byte data of image
+
+Real world example
+--------------------
+
+1. Social networking site like facebook,linkedin ,twitter, googl plus, you tube etc these site are producing alot to data produce daily these valuable that is not possible for processing these data in time frame so resolving these issue
+   hadoop comes in picture.
+
+2. Lets take another example Aviation industry in which aircrafts while flying sending  data to air traffic control system, the air traffic control use these data to manage and update traffic control so just think about it regularly large amount of data coming so it is very difficult to manage and find out result in traditional way of processing data so hadoop comes in picture.
+
+Types of data.
+---------------
+
+1. Structured data -> database,csv,xls,
+2. Semi Structured data ->emails,log file and word document
+3. Unstructured data ->not any format image,audio,video
+
+Character of Big Data:
+----------------------
+
+1. Value:size
+2. Velocity:speed
+3. Variety:type of data
+
+Challenges of Big Data:
+------------------------
+
+1. Store and manage huge amount of data.
+2. How to find out result from data.
+
+Traditional Approach of Storing and Processing Big Data:
+-------------------------------------------------------
+ Bank
+ hospital     ---------------->ETL ----------->process data and find out result:
+ stock market 
+ 
+ 
+ Drawback:
+ ---------------
+ 
+ 1 .It becomes very costly as data grow.
+ 2. Scalability: Big challenge to store, process and find out result.
+ 3. Time consuming
+ 
+ What is hadoop:
+ --------------
+ 
+ Hadoop is open source framework,developed by Dug cutting in 2003,it is managed by apache, it is design to store and proces huge value of data efficiently.
+ there is two part in hadoop
+ 1. HDFS(Hadoop Distributed File System):use for storing data
+ 2. Map Reduce for processing data
+ 
+Hadoop Cluster:
+   1. Master Node
+   2. Slave Node
+ 
+ * Master node is responsible for running NameNode and JobTracker deamon
+
+Note: Node is a technical term use for describe a computer or system. Deamon is background process
+
+ * Slave node on the other hand responsible for running DataNode and Task tracker deamon.
+ 
+ 
+* NameNode and DataNode is responsible for storing and managing the data and they are commonly refer to Storage Node.
+* Job Tracker and Task Tracker are responsible for computing and processing data and they are commonly refer to Compute node.
+
+Commonly Name node and Job tracker configured and running on a single machine.where as Data Node and Task Tracker configured on multiple machine
+but may be possible to running instances on multiple machine at a same time.
+
+Secondary Name Node:
+------------------
+
+Features of Hadoop:
+1. Cost effective system: comodity hardware:
+2. Large Cluster of Nodes
+3. Parallel Processing of data
+4. Distributed data
+5. Automatic Failover Management
+6. Data Localality Optimaization
+7. Hetrogeneous Cluster
+8. Scalability
+
+How hadoop works>
+Hadoop Ecosystem: Array of Related Software.
+
+1. Hive 
+2. Sqoop
+3. Flume
+4. Pig 
+5. HBase
+6. Map Reduce
+7. Zookeeper
+8. HDFS
+
+Now lets start understanding these softwares.
+1. Pig: Scripting language.
+2. HBase: Column oriented reading and writing data
+3. Hive: Sql like language use for 
+4. Sqoop: use for transfer data from hadoop to any relational database.
+5. Flume: Use for streaming data in hadoop hdfs.
+6. Zookeeper: take care of all coordination reguire for these software to function properly
+
+HDFS(Hadoop Distributed File System)
+---------------------------------------
+
+1. It is design for store and manage huge amount of data in efficent manner.
+2. Hadoop has been developed on paper published by google.
+             HDFS <-----------GFS(Google File System)
+3. HDFS is a userspace file system it is not use kernal for process file.
+   default block size =64 MB
+
+Props:
+---------
+
+   1. comodity hardware
+   2. large file size like in GB/TB
+   3. hdfs
+   4. fault toleracne
+   
+Cons:
+-------
+
+   1. Not for small size
+   2. Not suitable for ramdom read
+   3. Not suitable for multiple writers write data in file.
+   
+HDFS Daemons:
+--------------
+
+1. NameNode  -->Master
+2. DataNode  --> Slave
+Secondary NameNode
+
+
+
+NameNode:
+-------------
+
+NameNode is responsible for hadoop file system meta data, meta data keep track all files that present in hdfs 
+it is stores information related to file like
+File Name
+File Permission
+File OwnerShip
+File Location
+1 GB -->1 Million files information
+
+DataNode: 
+-----------
+
+DataNode is responsible for storing and retrieving data as instructed by name node,DataNode periodically reports to Name node with their current status with all the file blocks they are storing, that is called heart beat,Data Node stores multiple copies of each files that is present in  hadoop file system.
+ 
+ Secondary NameNode:
+ 
+ 
+ Process of Reading data from HDFS:
+ --------------------------------------
+ 1. Hadoop Client Library which would be in form of java library
+ 2. Cluster configuration data
+ 3. 
+ 
+ 
+Hadoop Important Commands:
+----------------------------
+1. hadoop fs -ls hdfs://namenode:8000/data      --> list of all directory present in hdfs
+2. hadoop fs -cat /data/the  display the content of the file
+3. hadoop fs -rm for delete file
+4. hadoop fs -rmr /data delete entire directory
+5. hadoop fs -touchz /data/HelloWorld.txt create an empty file in hdfs
+6. hadoop fs -mkdir /test  create a directory in hdfs
+7. hadoop fs -ls 
+8. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
