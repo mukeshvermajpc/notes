@@ -1,0 +1,84 @@
+@ViewChild()
+* ViewChild are used for component communication in Angular.Therefore, if a parent component want access of child component then
+it used ViewChild. Any component, directive, or element which is part of a template is ViewChild.
+* @ViewChild() decorator can be used to get the first element or the directive matching the selector from the view DOM. @ViewChild()
+provideds the instance of another component or directive in a parent component and then parent component can access the methods and 
+properties of the component or directive. In a parent component we can use @ViewChild() for components, directives and template reference
+variable with elementRef or TemplateRef. To use @ViewChild() we need to pass child component name or directive name or template
+variable as an argument
+*--> if you want to access following inside the Parent Component, use @ViewChild decorator of Angular.
+  1. Child Component
+  2. Directive
+  3. DOM Element
+*--> @ViewChild() can be used for component communication. A component will get instance of another component inside it using @ViewChild.
+In this way component will be able to access the properties and methods of child component. The child component selector will be used in parent
+component HTML template.
+===============================================================================================================================================
+@ViewChild using Directive in Angular 8
+  ---> @ViewChild() can instantiate a directive within a component and in this way the component will be able to access the directive methods.
+  ---> @ViewChild() provides the instance of another component or directive in a parent component and then parent component can access the methods
+  and properties of that component or directive.
+  ---> ViewChild are used for component communication in Angular. Therefore, if a parent component wants access of child component then it used viewChild.
+
+  ====================================================================================================================================================
+  @ViewChild() using Template Variable
+  -------------------------------------
+  --> @ViewChild() can instantiate ElementRef corresponding to a given template reference variable. The template variable name will be passed in @ViewChild
+       as an argument. In this way component will be able to change the appearance and behavior of element of given template variable
+	
+  ---> @ViewChild() provides the instance of another component or directive in a parent component and then parent component can access
+       the methods and properties of that component or directive.
+  ---> ViewChild are used for component communication in Angular. Therefore, if a parent component wants access of child component then
+        is used ViewChild.
+ ==============================================================================================================================
+  @HostListner()
+  -------------
+  * @HostListner() function decorator allows us to handle event of the host element in the directive class.
+  * @HostListner lets us to listen for event on host element or component.
+  ================================================================================================================
+  Transpilation
+  --------------
+  Transpilation is the process of coverting typescript code in java using compilation
+  it is in TSconfig.json
+ ---------------------------------------------------------------------------------------------------------------------
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
