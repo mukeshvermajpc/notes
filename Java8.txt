@@ -1,0 +1,131 @@
+     JAVA 8 FEATURES
+============================================================================================================================
+Lambda Expression
+  1. Without curly braces we can not use return keyword.compilor will consider return value automatically
+  2. Within curly braces if we want to return some value compulsory we should use return statement
+  
+  n->return n*n;===========>invalid
+  n->{return n*n;};======>valid
+  n->{n*n;}======>invalid
+  n->n*n; =======>valid
+--------------------------------------------------------------------------
+Once we write Lambda Expressions Functional Interface which contains single abstract method(SAM)
+ 1.Runnable ===>run()
+ 2.Callable===>call()
+ 3.Comparable===>compareTo()
+ 4.ActionListener ===>actionPerformed()
+ 
+ Lambda Expression applicable only for functional interface
+ 
+ Comparator is a functional interface that contain only one method that is called compare
+ 
+DEFAULT METHOD
+-------------------------------------------------------------------------------------------------
+ Without effecting implementation classes if we want to add new method to the interface ==>default method
+ 
+ 
+ Predefined Functional Interfaces
+ --------------------------------------------------------
+ Predicate<T>-->always return boolean value
+     Take some input and perform some conditional check and return boolean value
+
+ Function<T,R>---->T is input and R is return value
+	Take some input and perform some operation and return the result which in need not to be boolean
+	
+ Consumer<void>-->always consume never return any value
+   Accept some input and perform required operation and not required to return anything     
+  
+ Supplier<>
+	Just supply my required object and it won't take any input 
+	
+	Predicate-->test()
+	Function--->apply()
+	Consumer--->accept()
+	Supplier---->get()
+	
+* Normal predicate can take only one input argument and perform some conditional check . Sometimes our programming requirement is we have to take 2 input argument and perform some
+  conditional check, for the requirement we should go for BiPredicate .
+* BiPredicate is exactly same as Predicate except that it will take 2 input argument.
+
+interface BiPredicate<T1,T2>{
+	public boolean test(T1 t1,T2 t2);
+	//remaining default and static method are same
+}
+
+  
+	
+	
+	
+	
+	
+ Two argument Predefined functional interfaces:
+ -------------------------------------------------------
+ BiPredicate
+ BiFunction
+ BiConsumer
+ -------------------------------------------------------
+ Primitive Functional interfaces
+ -------------------------------------------------------
+ IntPredicate
+ IntFunction
+ IntConsumer
+ 
+ Stream:-------------
+ if you want to perform some operation on collection element go for stream
+ 
+ Purpose of stream:-
+ 1. Stream s=c.stream();
+ 2. filter(Predicate<T>t)
+ 3. map(Function<T,R>f)
+    1. collect()
+    2. count()
+    3. sorted()
+       sorted(Comparator c)	
+	4. min(Comparator c)
+	5. max(Comparator c)
+	
+	forEach()
+	toArray()
+	Streamof()
+	
+clone()
+==================================================================
+To preserve original value of an object cloning must be required
+Creating exact duplicate of an object is known as cloning
+     1. maintain 
+	 
+	 
+  Shallow cloning Vs Deep Cloning
+  -------------------------------------
+  
+  
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Java9 Features
+
+1. JShell
+2. JPMS(Java Platform Module System) 
+3. JLink(Java Linker)
+4. Http Client
+5. Process Api Updates
+6. Private method in interface
+7. Try with resources
+8. Factory method to create unmodifiable collections
+9. Stream API enhencement
+10. <>Diamond operator
+11. SafeVaragrs annotation
+12. G1GC(Garbage once Garbage Collector)
+
+JPMS(Java Plateform Module System):-
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

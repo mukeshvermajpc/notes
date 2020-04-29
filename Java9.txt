@@ -1,0 +1,72 @@
+Diamond operator:
+-------------------------------
+   What is the need of generics?
+   1. To provide type safety 
+   2. To resolve type casting problem
+     Arraylist l=new ArrayList()
+	1. it is not type casting
+	2. Type cast require at runtime
+        To overcome these issue..
+		ArrayList<String>list=new Arraylist<String>();
+
+Difference between Non-generics and non-generics collections
+---------------------------------------------------------------------------------
+            Non Generics                                            Generics
+
+1.  Arraylist list=new ArrayList()           1. Arraylist<String>list=new ArrayList<String>()
+2.  It is non generics version of arraylist  2. It is generics version of arraylist object
+    object
+3. For this ArrayList,we can add any type of object 3. For this ArrayList, we can add only String type of object and hence it is type safe
+   and hence it is non type safe 
+4. At the time of retrival, we should perform type-cast, otherwise we      4. At the time of retrival, it is not required to perform type-casting  
+   will get compile time error,hence Type casting is bigger headache in       hence Type-Casting headache are not there in Generic Collections      
+   non-generics Collections
+ 
+Daimond Operator Enhencement
+-------------------------------------------------------
+This is as the part of Milling Project Coin(JEP 213)
+
+Before understanding this enhencement, we should aware Generics concept, Which has been introduced in java 1.5 version.
+
+The main objectives of Generics are.
+1. To provide Type Safety
+2. To resolve Type Casting Problems.
+
+Case 1: Type-Safety
+      Arrays are always type safe.i.e we can give  the guarantee for tye type of elements present inside array. For example if our programming requirement it to hold String type of object
+	  , it is recommended to use String array. for the String array we can add only string type of objects. By mistake if we are trying to add any other type we will get compile time error.
+	  Eg:
+	  1. String[]s=new String[100];
+	  2. s[0]="Rahul";
+	  3. s[1]="Kumar"
+	  4. s[2]=new Integer(10); // errror:incompatible type:Integer cannot be converted to String
+	  String[] can contains only String type of element. Hence, we can always give guarantee for the type of elements present inside array.Due to this arrays are safe to use with respect to 
+	  type.Hence arrays are type safe.
+	  But collections are not type safe that is we can't give any guarantee for the type of elements present inside collection. For example if our programming requirement is to hold only string type of objects,and if we choose ArrayList,by mistake if we are trying to add any other type we won't get any compile time error but the program may fail in runtime.
+	  
+Safevarargs method
+-------------------------------------------------------------------------------------------------
+Before Java9 safevarargs method can be apply only on constructor,static and final method but after coming java9 it can be apply on private method also
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
